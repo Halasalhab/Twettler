@@ -8,32 +8,39 @@
   <body>
 
    
-      <p>Titter</p>
-  
-    
-    <div id="new">
-    </div>
+      <p>Twittler</p>
+
+    <p id="new">
+    </p>
 
    <div>
     <script>
+
       $(document).ready(function(){
-        var newDiv = $('#new');
-        newDiv.html('');
+        $('#refresh').click(function(){
+           var newDiv = $('#new');
+          newDiv.html('');
 
         var index = streams.home.length - 1;
-        while(index >= 0){
-
-          var d = new Date();
-          d.setFullYear(2020);
+        while(index >= 0)
+        {
           var tweet = streams.home[index];
           var $tweet = $('<div></div>');
-          $tweet.text('@' + tweet.user + ': ' + tweet.message + " " + d.toTimeString())
-
+          $tweet.text('@' + tweet.user + ': ' + tweet.message + " " + tweet.created_at)
           $tweet.appendTo(newDiv);
           index -= 1;
         }
+        $('p#new').click(function(){
+        location.href = "index1.html";
+        })
+        })
+
       });
     </script>
+
     </div>
+    <button type="button" id="refresh">refresh the tweets</button>
+
   </body>
 </html>
+

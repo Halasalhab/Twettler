@@ -2,14 +2,14 @@ body {
   background-image: url("twettir.gif");
   background-repeat: no-repeat;
    background-size: cover;
-  /* display: "flex"; 
+  display: "flex"; 
   justify-content: "center";
-  align-items: "center"; */
-  /* flex-flow: "column wrap"; */
+  align-items: "center"; 
+   flex-flow: "column wrap"; 
 }
 div {
   
-  background-color: rgb(109, 163, 170);
+  background-color: rgb(245, 12, 121);
 }
 
 #p {
